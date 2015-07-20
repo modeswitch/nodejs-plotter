@@ -128,8 +128,8 @@ function setup_gnuplot(gnuplot, options) {
  */
 function post_gnuplot_processing(error, stdout, stderr) {
   /* Print stuff */
-  console.log('stdout: ' + stdout);
-  console.log('stderr: ' + stderr);
+  if(stdout) console.log('stdout: ' + stdout);
+  if(stderr) console.log('stderr: ' + stderr);
   if (error !== null) {
     console.log('exec error: ' + error);
   }
